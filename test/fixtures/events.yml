@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  venue_id: 1
+  artist_id: 1
+  date: 2020-12-23
+  time: 1
+
+two:
+  venue_id: 1
+  artist_id: 1
+  date: 2020-12-23
+  time: 1
