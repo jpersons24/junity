@@ -1,7 +1,13 @@
 <h1><%= @artist.name %></h1>
 
-<p>Need ability to edit artist, and to add more attributes for each artist:</p>
-<ul>
-   <li>Age - integer</li>
-   <li>Bio - text </li>
-</ul>
+<div>
+   <p>About:</p>
+   <ul>
+      <li>Age: <%= @artist.age %></li>
+      <li>Bio: <%= @artist.bio %> </li>
+   </ul>
+</div>
+
+<p><%= link_to 'Edit Artist Information', edit_artist_path(@artist) %></p>
+
+<p>Add artist to favorites</p>

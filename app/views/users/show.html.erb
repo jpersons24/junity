@@ -1,0 +1,18 @@
+<h1><%= @user.name %></h1>
+
+<p><b>Age:</b> <%= @user.age %></p>
+<p>Add bio attribute for users?</p>
+
+<p><%= link_to "Click here", edit_user_path %> to edit your information!</p>
+
+<p>See <%= link_to "full artist list.", artists_path %></p>
+
+<div>
+   <p>Favorites Artists:</p>
+   <ul>
+       <% @user.artists.each do |artist| %>
+         <li><%= link_to artist.name, artist_path(artist) %></li>
+       <% end %>
+   </ul>
+</div>
+

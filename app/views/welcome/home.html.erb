@@ -1,0 +1,17 @@
+<h1>JUNITY</h1>
+
+<h4>Let's jam, together!</h4>
+
+<div>
+   <p><strong>Upcoming events:</strong></p>
+
+   <% @events.each do |event| %>
+      <div>
+         <p><%= event.artist.name %> @ <%= event.venue.name %> <img src=<%= event.venue.img_url %> alt="picture of venue" height=200px width=200px></p>
+         <p><i><%= event.date %> - <%= event.time %></i></p>
+      </div>
+   <% end %>
+</div>
+
+
+
