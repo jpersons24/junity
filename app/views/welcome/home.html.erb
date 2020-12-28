@@ -6,13 +6,14 @@
    <p><strong>Upcoming events:</strong></p>
 
    <% @events.each do |event| %>
-      <div style='border: double green'>
+      <div style='border: double green' >
          <p>Date --> <i><%= event.date %></i></p>
          <p>Time --> <i><%= event.time %></i></p>
-         <p><img src=<%= event.venue.img_url %> alt="picture of venue" height=200px width=200px> <%= event.artist.name %> @ <%= event.venue.name %> </p>
+         <p><img src=<%= event.venue.img_url %> alt="picture of venue" height=200px width=200px> <%= event.artist.name %> @ <%= link_to event.venue.name, event_path(event) %> </p>
       </div>
    <% end %>
 </div>
+
 
 
 

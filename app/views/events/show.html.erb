@@ -1,0 +1,18 @@
+<h2><%= @event.artist.name %></h2>
+
+<div>
+   <p>Date: <%= @event.date %></p>
+   <p><i><%= @event.time %> PM </i></p>
+</div>
+
+<div>
+   <strong><%= link_to @event.venue.name, venue_path(@event.venue.id) %></strong> <br>
+   <img src=<%= @event.venue.img_url %> alt="picture of venue" height="400px" width="400px">
+</div>
+
+<%= @event.artist.bio %>
+
+
+
+
+
