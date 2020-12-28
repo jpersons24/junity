@@ -1,16 +1,27 @@
-<h2><%= @event.artist.name %></h2>
+<% if session[:page_visits].to_i <= 3%>
 
-<div>
-   <p>Date: <%= @event.date %></p>
-   <p><i><%= @event.time %> PM </i></p>
-</div>
+   <h2><%= @event.artist.name %></h2>
 
-<div>
-   <strong><%= link_to @event.venue.name, venue_path(@event.venue.id) %></strong> <br>
-   <img src=<%= @event.venue.img_url %> alt="picture of venue" height="400px" width="400px">
-</div>
+   <div>
+      <p>Date: <%= @event.date %></p>
+      <p><i><%= @event.time %> PM </i></p>
+   </div>
 
-<%= @event.artist.bio %>
+   <div>
+      <strong><%= link_to @event.venue.name, venue_path(@event.venue.id) %></strong> <br>
+      <img src=<%= @event.venue.img_url %> alt="picture of venue" height="400px" width="400px">
+   </div>
+
+   <%= @event.artist.bio %>
+
+<% else %>
+
+   <h1>Show Ad</h1>
+
+
+   <%= button_to "Watched ad", page_reset_path, method: :delete %>
+
+<% end %>
 
 
 

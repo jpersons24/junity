@@ -21,7 +21,10 @@ Rails.application.routes.draw do
   # events
   get "/events/:id", to: "events#show", as: "event"
 
-  #venues
+  # venues
   get "/venues/:id", to: "venues#show", as: "venue"
+
+  # sessions
+  delete '/sessions/reset', to: 'sessions#reset_page_visits', as: 'page_reset'
   
 end
