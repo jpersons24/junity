@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   
+  get 'favorite_artist/new'
+  get 'favorite_artist/create'
   get 'venues/show'
   # welcome
   get '/welcome/home', to: "welcome#home", as: "home"
@@ -26,5 +28,9 @@ Rails.application.routes.draw do
 
   # sessions
   delete '/sessions/reset', to: 'sessions#reset_page_visits', as: 'page_reset'
+
+  # favorite artists
+  get '/favorite_artists/new', to: 'favorite_artists#new', as: 'new_favorite_artist'
+  post '/favorite_artists', to: 'favorite_artists#create'
   
 end
