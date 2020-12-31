@@ -12,7 +12,28 @@ class UsersController < ApplicationController
       @user = find_user
       @user.update(user_params)
 
-      redirect_to user_path(@user)
+      if @user.valid?
+         redirect_to user_path(@user)
+      else
+         flash[:errors_array] = @user.errors.full_messages
+         redirect_to edit_user_path(@user)
+      end
+   end
+
+   def new
+      @user = User.new
+   end
+
+   def create
+      @user = User.create(user_params)
+
+      if @user.valid?
+         redirect_to user_path(@user)
+      else
+         flash[:errors_array] = @user.errors.full_messages
+         redirect_to new_user_path
+      end
+      # byebug
    end
 
    private

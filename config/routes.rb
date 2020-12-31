@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   patch "/artists/:id", to: "artists#update"
 
   # users
+  get "/users/new", to: "users#new", as: "new_user"
+  post "/users", to: "users#create"
   get "/users/:id", to: "users#show", as: "user"
   get "/users/:id/edit", to: "users#edit", as: "edit_user"
   patch "/users/:id", to: "users#update"
@@ -25,6 +27,7 @@ Rails.application.routes.draw do
 
   # venues
   get "/venues/:id", to: "venues#show", as: "venue"
+  get "/venues", to: "venues#index", as: "venues"
 
   # sessions
   delete '/sessions/reset', to: 'sessions#reset_page_visits', as: 'page_reset'

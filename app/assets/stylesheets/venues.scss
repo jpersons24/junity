@@ -1,3 +1,18 @@
 // Place all the styles related to the venues controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+#venue-container {
+   border: double #c72121c4;
+   background-color: #c49f9f93;
+   border-radius: 15px;
+}
+
+#venue-container ul {
+   list-style-type: none;
+}
+
+// #venue-details li {
+//    float: left;
+//    display: block;
+// }

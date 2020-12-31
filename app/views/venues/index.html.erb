@@ -1,0 +1,13 @@
+<h1>All Venues</h1>
+
+<div>
+   <% @venues.each do |venue| %>
+      <div id="venue-container">
+         <img src=<%= venue.img_url %> alt="Picture of venue" height="200" width="200">
+            <ul id="venue-details">
+               <li><%= venue.name %></li>
+               <li><%= venue.location %></li>
+            </ul>
+      </div>
+   <% end %>
+</div>

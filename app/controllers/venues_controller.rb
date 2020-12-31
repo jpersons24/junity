@@ -4,4 +4,8 @@ class VenuesController < ApplicationController
     @venue = Venue.find(params[:id])
   end
 
+  def index
+    @venues = Venue.all
+  end
+
 end

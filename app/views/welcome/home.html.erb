@@ -1,12 +1,24 @@
-<h1>JUNITY</h1>
+<div id="welcome-header">
+   <h1>JUNITY</h1>
+</div>
 
-<h3>Let's jam, together!  --------   <%= link_to 'Click here to see all artists!', artists_path %></h3>
+<div id="nav-bar">
+   <ul id="nav-list">
+      <li>Sign in</li>
+      <li><%= link_to "Sign up", new_user_path %></li>
+      <li><%= link_to "Artists", artists_path %></li>
+      <li><%= link_to "Venues", venues_path %></li>
+   </ul>
+</div>
 
-<div>
+<br>
+<br>
+
+<div id="event-list">
    <p><strong>Upcoming events:</strong></p>
 
    <% @events.each do |event| %>
-      <div style='border: double green' >
+      <div id="event-container" >
          <p>Date --> <i><%= event.date %></i></p>
          <p>Time --> <i><%= event.time %></i></p>
          <p><img src=<%= event.venue.img_url %> alt="picture of venue" height=200px width=200px> <%= event.artist.name %> @ <%= link_to event.venue.name, event_path(event) %> </p>

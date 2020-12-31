@@ -1,11 +1,12 @@
-<h1><%= @user.name %></h1>
+<h1><%= @user.username %></h1>
 
+<p><b>Name:</b> <%= @user.name %></p>
 <p><b>Age:</b> <%= @user.age %></p>
-<p>Add bio attribute for users?</p>
+<p>Add bio-message attribute for users?</p>
 
-<p><%= link_to "Click here", edit_user_path %> to edit your information!</p>
+<p><%= link_to "Edit profile!", edit_user_path %></p>
 
-<p>See <%= link_to "full artist list.", artists_path %></p>
+<p>Check out the full artist list <%= link_to "here", artists_path %></p>
 
 <div>
    <p>Favorites Artists:</p>
@@ -15,4 +16,6 @@
        <% end %>
    </ul>
 </div>
+
+<%= link_to "Jump to Home Page", home_path %>
 
