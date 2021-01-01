@@ -1,12 +1,13 @@
 
 <div id="event-list">
-   <p><strong>Upcoming events:</strong></p>
+   <p id="upcoming-events"><strong>Upcoming events:</strong></p>
 
    <% @events.each do |event| %>
       <div id="event-container" >
-         <p>Date --> <i><%= event.date %></i></p>
-         <p>Time --> <i><%= event.time %></i></p>
-         <p><img src=<%= event.venue.img_url %> alt="picture of venue" height=200px width=200px> <%= event.artist.name %> @ <%= link_to event.venue.name, event_path(event) %> </p>
+         <p class="date">Date --> <i><%= event.date %></i></p>
+         <p class="time">Time --> <i><%= event.time %></i></p>
+         <p class="details"><%= event.artist.name %> @ <%= link_to event.venue.name, event_path(event) %></p>
+         <p><img class="venue-image" src=<%= event.venue.img_url %> alt="picture of venue" height=200px width=200px></p>
       </div>
    <% end %>
 </div>

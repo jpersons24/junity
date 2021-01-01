@@ -14,6 +14,9 @@
  *= require_self
  */
 
+body {
+   background-color: black;
+}
 
 .nav-bar {
    width: 100%;
@@ -22,16 +25,18 @@
 .nav-list {
    position: fixed;
    top: 0;
-   width: 100%;
+   width: 94%;
    z-index: 2000;
    background-color: black;
+   border-style: groove;
+   border-color: #c72121c4;
+   border-radius: 15px;
 }
 
 .nav-tabs {
    color: white;
    font-family: 'Audiowide', cursive;
    display: inline-block;
-   color: black;
    text-decoration: none;
    font-size: 20px;
    margin-left: 15px;
@@ -39,9 +44,11 @@
 }
 
 .logo {
+   color: red;
+   text-shadow: 3px 3px rgba(134, 123, 123, 0.651);
    font-family: 'Audiowide', cursive;
    font-size: 40px;
-   padding: 0px 0px;
+   padding: 5px 0px;
 }
 
 .first-tab {
@@ -54,7 +61,23 @@
    margin-top: 20px;
 }
 
+.right:hover {
+   text-decoration: none;
+   color: red;
+   transition: 1s;
+}
+
+.nav-list li a:visited {
+   text-decoration: none;
+   color: white;
+}
+
+.nav-list li a:hover {
+   text-decoration: none;
+   color: red;
+   transition: 1s;
+}
+
 .container {
-   background-color: #d68b8b;
-   margin-top: 70px;
+   margin-top: 100px;
 }

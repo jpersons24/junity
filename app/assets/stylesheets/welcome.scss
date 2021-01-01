@@ -4,8 +4,62 @@
 
 
 
-#event-container {
-   border: double #c72121c4;
-   background-color: #c49f9f93;
-   border-radius: 15px;
+#upcoming-events {
+   color: red;
+   font-family: 'Audiowide', cursive;
+   margin-left: 25px;
 }
+
+#event-container {
+   border: double #f7f7f7c4;
+   background-color: rgba(233, 210, 210, 0.253);
+   border-radius: 15px;
+   margin: 25px;
+   // float: left;
+}
+
+#event-container p {
+   margin: 25px;
+}
+
+.date {
+   color: white;
+   font-family: 'Audiowide', cursive;
+   float: right;
+}
+
+.time{
+   color: white;
+   font-family: 'Audiowide', cursive;
+   float: right;
+}
+
+.details {
+   color: white;
+   font-family: 'Audiowide', cursive;
+}
+
+.details a {
+   text-decoration: none;
+   color: white;
+}
+
+.details a:visited {
+   text-decoration: none;
+   color: white;
+}
+
+.details a:hover {
+   text-decoration: none;
+   // color: aquamarine;
+   text-shadow: 3px 3px red;
+   // transition: 1s;
+}
+
+.venue-image {
+   border-style: solid;
+   border-color: white;
+}
+
+
+

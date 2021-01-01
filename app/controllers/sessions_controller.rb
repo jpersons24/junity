@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
 
    # create session!
    def create
-      
+      user = User.find_by(user_name: params[:session][:user_name])
    end
 
 end
