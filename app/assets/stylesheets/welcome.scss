@@ -2,27 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-#welcome-header {
-   color: #c72121c4;
-   background-color: #000000;
-   text-align: center;
-}
 
-#nav-bar ul {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-}
-
-#nav-list li {
-   float: left;
-   display: block;
-   padding-top: 10px;
-   padding-bottom: 10px;
-   padding-right: 30px;
-   padding-left: 30px;
-   background-color: #c49f9f93;
-}
 
 #event-container {
    border: double #c72121c4;

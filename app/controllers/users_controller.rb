@@ -28,12 +28,12 @@ class UsersController < ApplicationController
       @user = User.create(user_params)
 
       if @user.valid?
+         session[:user_id] = @user.id
          redirect_to user_path(@user)
       else
          flash[:errors_array] = @user.errors.full_messages
          redirect_to new_user_path
       end
-      # byebug
    end
 
    private

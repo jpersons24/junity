@@ -8,4 +8,13 @@ class SessionsController < ApplicationController
       redirect_back fallback_location: home_path
    end
 
+   # new session!
+   def new
+   end
+
+   # create session!
+   def create
+      
+   end
+
 end
