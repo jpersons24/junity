@@ -1,15 +1,21 @@
-<h1><%= @user.username %></h1>
+<div class="user-header">
+  <h1><%= @user.username %></h1>
+</div>
 
-<p><b>Name:</b> <%= @user.name %></p>
-<p><b>Age:</b> <%= @user.age %></p>
-<p>Add bio-message attribute for users?</p>
 
-<p><%= link_to "Edit profile!", edit_user_path %></p>
+<div class="user-info-container">
+  <h5 class="user-info-header">Personal Info:</h5>
 
-<p>Check out the full artist list <%= link_to "here", artists_path %></p>
+  <p class="user-name"><b>Name:</b> <%= @user.name %></p>
+  <p class="user-age"><b>Age:</b> <%= @user.age %></p>
+</div>
 
-<div>
-   <p>Favorites Artists:</p>
+<div class="profile-edit">
+  <p class="edit-link"><%= link_to "Edit profile information!", edit_user_path(@user) %></p>
+</div>
+
+<div class="favorites-container">
+   <h5 class="favorites-header">Favorites Artists:</h5>
    <ul>
        <% @user.artists.each do |artist| %>
          <li><%= link_to artist.name, artist_path(artist) %></li>
@@ -17,5 +23,5 @@
    </ul>
 </div>
 
-<%= link_to "Jump to Home Page", home_path %>
+
 

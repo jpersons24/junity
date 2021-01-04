@@ -22,8 +22,10 @@
         <li class="nav-tabs"><%= link_to "Venues", venues_path %></li>
         <% if @current_user %>
           <li class="nav-tabs right">Welcome, <%= link_to @current_user.username, user_path(@current_user) %>!</li>
+          <li class="nav-tabs logout"><%= link_to "Logout", logout_path, method: :delete %></li>
         <% else  %>
           <li class="nav-tabs right"><%= link_to "Sign up", new_user_path %></li>
+          <li class="nav-tabs right"><%= link_to "Login", new_session_path %></li>
         <% end %>
       </ul>
     </div>

@@ -1,3 +1,92 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.user-header {
+   color: white;
+   font-family: 'Audiowide', cursive;
+   text-shadow: 3px 3px rgba(134, 123, 123, 0.651);
+   padding-left: 40px;
+}
+
+.user-info-header {
+   color: red;
+   font-family: 'Audiowide', cursive;
+   text-shadow: 3px 3px rgba(134, 123, 123, 0.651);
+   padding-left: 20px;
+}
+
+.user-info-container {
+   border-style: groove;
+   border-color: white;
+   border-radius: 15px;
+   margin: 25px;
+}
+
+.edit-link a {
+   color: white;
+   font-family: 'Audiowide', cursive;
+   padding-left: 40px;
+}
+
+.edit-link a:visited {
+   color: white;
+   font-family: 'Audiowide', cursive;
+}
+
+.edit-link a:hover {
+   color: red;
+   transition: 1s;
+   font-family: 'Audiowide', cursive;
+}
+
+.user-name {
+   color: white;
+   font-family: 'Audiowide', cursive;
+   padding-left: 35px;
+}
+
+.user-age {
+   color: white;
+   font-family: 'Audiowide', cursive;
+   padding-left: 35px;
+}
+
+.favorites-header {
+   color: red;
+   font-family: 'Audiowide', cursive;
+   text-shadow: 3px 3px rgba(134, 123, 123, 0.651);
+   padding-left: 20px;
+}
+
+.favorites-container {
+   border-style: groove;
+   border-color: white;
+   border-radius: 15px;
+   margin: 25px;
+}
+
+.favorites-container ul li {
+   color: white;
+   font-family: 'Audiowide', cursive;
+   padding-left: 35px;
+}
+
+.favorites-container ul li a:visited {
+   color: white;
+   font-family: 'Audiowide', cursive;
+}
+
+.favorites-container ul li a:hover {
+   color: red;
+   transition: 1s;
+}
+
+.errors {
+   color: red;
+   font-family: 'Audiowide', cursive;
+   text-decoration: none;
+   margin: 25px;
+}
+

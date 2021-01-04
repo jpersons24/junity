@@ -38,7 +38,7 @@ body {
    font-family: 'Audiowide', cursive;
    display: inline-block;
    text-decoration: none;
-   font-size: 20px;
+   font-size: 15px;
    margin-left: 15px;
    padding: 0px 20px;
 }
@@ -57,8 +57,23 @@ body {
 
 .right {
    float: right;
-   margin-right: 50px;
-   margin-top: 20px;
+   margin-right: 30px;
+   margin-top: 30px;
+}
+
+.logout {
+   float: right;
+   margin-right: 30px;
+   margin-top: 30px;
+}
+
+.logout a {
+   text-decoration: none;
+   color: white;
+}
+
+.logout a:visited {
+   color: white;
 }
 
 .right:hover {
@@ -80,4 +95,29 @@ body {
 
 .container {
    margin-top: 100px;
+}
+
+.form-container {
+   color: white;
+   font-family: 'Audiowide', cursive;
+   border-style: groove;
+   border-color: #c72121c4;
+   background-color: rgba(233, 210, 210, 0.253);
+   min-width: 300px;
+   max-width: 600px;
+   margin: 0px auto;
+   margin-top: 200px;
+   padding: 20px;
+   border-radius: 15px;
+   text-align: center;
+}
+
+.form-btn {
+   background-color: rgb(229,9,20);
+   margin-top: 10px;
+   border-radius: 25px;
+}
+
+.form-input {
+   margin-top: 10px;
 }

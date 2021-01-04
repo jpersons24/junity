@@ -31,6 +31,9 @@ Rails.application.routes.draw do
 
   # sessions
   delete '/sessions/reset', to: 'sessions#reset_page_visits', as: 'page_reset'
+  delete '/sessions/logout', to: 'sessions#logout', as: 'logout'
+  post '/sessions', to: 'sessions#create', as: 'sessions'
+  get '/sessions/new', to: 'sessions#new', as: 'new_session'
 
   # favorite artists
   get '/favorite_artists/new', to: 'favorite_artists#new', as: 'new_favorite_artist'

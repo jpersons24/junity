@@ -1,19 +1,37 @@
 <h1>Create Profile</h1>
 
-<% if flash[:errors_array] %>
-   <% flash[:errors_array].each do |error| %>
-      <p style="color: red;"><%= error %></p>
-   <% end%>
-<% end %>
+<div class="user-errors-container">
+   <% if flash[:errors_array] %>
+      <% flash[:errors_array].each do |error| %>
+         <p class="errors"><%= error %></p>
+      <% end%>
+   <% end %>
+</div>
 
-<%= form_for @user do |f| %>
-   <%= f.label "Name:" %>
-   <%= f.text_field :name %> <br>
-   <%= f.label "Username:" %>
-   <%= f.text_field :username %> <br>
-   <%= f.label "Password:" %>
-   <%= f.text_field :password %> <br>
-   <%= f.label "Age:" %>
-   <%= f.text_field :age %> <br>
-   <%= f.submit "Create Profile" %>
-<% end %>
+<div class="form-container">
+   <h1>Create Profile</h1>
+
+      <%= form_for @user do |f| %>
+         <div class="form-input">
+            <%= f.label "Name:" %>
+            <%= f.text_field :name %> <br>
+         </div>
+
+         <div class="form-input">
+         <%= f.label "Username:" %>
+         <%= f.text_field :username %> <br>
+         </div>
+
+         <div class="form-input">
+         <%= f.label "Password:" %>
+         <%= f.text_field :password %> <br>
+         </div>
+
+         <div class="form-input">
+         <%= f.label "Age:" %>
+         <%= f.text_field :age %> <br>
+         </div>
+
+         <%= f.submit class: 'form-btn' "Create Profile" %>
+      <% end %>
+</div>
